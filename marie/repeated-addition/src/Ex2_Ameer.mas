@@ -1,0 +1,61 @@
+/ N,M in decimal 0..32767.
+/ Product from repeated addition, or -1 on invalid input/overflow.
+ORG 100
+Input
+Store N
+Skipcond 000
+Jump ReadM
+Jump Error
+ReadM, Input
+Store M
+Skipcond 000
+Jump Choose
+Jump Error
+Choose, Load N
+Subt M
+Skipcond 000
+Jump NAtLeastM
+Jump NLessM
+NAtLeastM, Load N
+Store Big
+Load M
+Store Count
+Jump Init
+NLessM, Load M
+Store Big
+Load N
+Store Count
+Init, Clear
+Store Product
+LoopCheck, Load Count
+Skipcond 400
+Jump CheckAdd
+Jump Done
+CheckAdd, Load MaxValue
+Subt Product
+Subt Big
+Skipcond 000
+Jump AddSafe
+Jump Error
+AddSafe, Load Product
+Add Big
+Store Product
+Load Count
+Subt One
+Store Count
+Jump LoopCheck
+Done, Load Product
+Output
+Halt
+Error, Load NegOne
+Output
+Halt
+N, DEC 0
+M, DEC 0
+Big, DEC 0
+Count, DEC 0
+Product, DEC 0
+One, DEC 1
+MaxValue, DEC 32767
+NegOne, DEC -1
+END

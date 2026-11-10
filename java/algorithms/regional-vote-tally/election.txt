@@ -1,0 +1,8 @@
+4
+5
+CandidateA CandidateB CandidateA CandidateA CandidateC
+4
+CandidateA CandidateB CandidateA CandidateB
+0
+5
+CandidateA CandidateA CandidateB CandidateB CandidateC

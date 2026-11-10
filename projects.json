@@ -1,0 +1,299 @@
+[
+  {
+    "id": "applications/phone-directory",
+    "name": "Phone Directory",
+    "path": "java/applications/phone-directory",
+    "mainClass": "PhoneDirectory",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A console phone directory built around an ArrayList of member records."
+  },
+  {
+    "id": "applications/fast-food-order-calculator",
+    "name": "Fast Food Restaurant Order Calculator",
+    "path": "java/applications/fast-food-order-calculator",
+    "mainClass": "FastFoodRestaurant",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A Swing order calculator with sandwich choices, optional sides and drinks, an order summary, and change calculation."
+  },
+  {
+    "id": "applications/student-information-browser",
+    "name": "Student Information Browser",
+    "path": "java/applications/student-information-browser",
+    "mainClass": "StudentInformationApp",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A Swing browser for a small collection of student records, with separate model, window, and application-entry classes."
+  },
+  {
+    "id": "applications/car-inventory-lookup",
+    "name": "Car Inventory Lookup",
+    "path": "java/applications/car-inventory-lookup",
+    "mainClass": "CarInventoryApp",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A Swing vehicle lookup exercise using a HashMap of sample car records."
+  },
+  {
+    "id": "applications/personal-information-form",
+    "name": "Personal Information Form",
+    "path": "java/applications/personal-information-form",
+    "mainClass": "PersonalInformationApp",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A Swing form exercise that checks input and displays a local summary."
+  },
+  {
+    "id": "applications/clothing-catalog-browser",
+    "name": "Clothing Catalog Browser",
+    "path": "java/applications/clothing-catalog-browser",
+    "mainClass": "ClothingStore",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A Swing catalog browser for four clothing records stored in a two-dimensional array."
+  },
+  {
+    "id": "applications/mama-mia-pizzaria",
+    "name": "Mama Mia Pizzaria",
+    "path": "java/applications/mama-mia-pizzaria",
+    "mainClass": "MamaMiaPizzaria",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A dialog-based pizza order calculator."
+  },
+  {
+    "id": "applications/bmi-calculator",
+    "name": "Body Mass Index Calculator",
+    "path": "java/applications/bmi-calculator",
+    "mainClass": "BodyMassIndex",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A small dialog-based exercise in numeric input, arithmetic, and conditional categories."
+  },
+  {
+    "id": "applications/rectangle-calculator",
+    "name": "Rectangle Area and Perimeter Calculator",
+    "path": "java/applications/rectangle-calculator",
+    "mainClass": "RectangleApp",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A Swing calculator for a rectangle's area and perimeter."
+  },
+  {
+    "id": "applications/five-operation-calculator",
+    "name": "Five-operation Calculator",
+    "path": "java/applications/five-operation-calculator",
+    "mainClass": "CalculatorApp",
+    "kind": "Java",
+    "category": "applications",
+    "description": "A two-input Swing calculator for five arithmetic operations."
+  },
+  {
+    "id": "algorithms/gratuity",
+    "name": "Gratuity calculator",
+    "path": "java/algorithms/gratuity",
+    "mainClass": "Program1_Gratuity",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "A console calculator that takes a subtotal and tip percentage, then prints the gratuity and total."
+  },
+  {
+    "id": "algorithms/income-band-tax",
+    "name": "Income-band tax exercise",
+    "path": "java/algorithms/income-band-tax",
+    "mainClass": "Program2_Tax",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "A Java console exercise that selects a rate from five income bands and rounds the resulting tax to the nearest dollar."
+  },
+  {
+    "id": "algorithms/lottery",
+    "name": "Lottery digit matching",
+    "path": "java/algorithms/lottery",
+    "mainClass": "Program3_Lottery",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "A small console game that compares a two-digit guess with a random two-digit draw."
+  },
+  {
+    "id": "algorithms/number-guessing",
+    "name": "Number guessing game",
+    "path": "java/algorithms/number-guessing",
+    "mainClass": "Program4_Guess",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "A console guessing game with a random target from 0 through 100 and high-or-low hints."
+  },
+  {
+    "id": "algorithms/coordinate-geometry",
+    "name": "Coordinate geometry calculator",
+    "path": "java/algorithms/coordinate-geometry",
+    "mainClass": "Program1",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "Calculates the slope and distance between two points with integer coordinates."
+  },
+  {
+    "id": "algorithms/relative-grades",
+    "name": "Relative grade calculator",
+    "path": "java/algorithms/relative-grades",
+    "mainClass": "Program2",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "Reads a group of scores and assigns letter grades relative to the highest score in the group."
+  },
+  {
+    "id": "algorithms/bank-account-tester",
+    "name": "Bank account collection exercise",
+    "path": "java/algorithms/bank-account-tester",
+    "mainClass": "BankAccountTester",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "Demonstrates object arrays, deposits and withdrawals, balance totals, filtering, and a name lookup using fictional bank accounts."
+  },
+  {
+    "id": "algorithms/recursive-methods",
+    "name": "Six recursive methods study wrapper",
+    "path": "java/algorithms/recursive-methods",
+    "mainClass": "RecursionExercises",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "A console demonstration of recursive counting, summation, digit counting, and digit summation."
+  },
+  {
+    "id": "algorithms/stack-partition",
+    "name": "Stack partition by sign",
+    "path": "java/algorithms/stack-partition",
+    "mainClass": "splitStackProgram.Main",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "Reads integer stacks from a text file and places negative integers below nonnegative integers using two queues."
+  },
+  {
+    "id": "algorithms/delimiter-validation",
+    "name": "Balanced delimiter validator",
+    "path": "java/algorithms/delimiter-validation",
+    "mainClass": "Main",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "Checks whether parentheses, brackets, braces, and angle brackets are balanced and correctly nested."
+  },
+  {
+    "id": "algorithms/unique-courses",
+    "name": "Sorted unique course listing",
+    "path": "java/algorithms/unique-courses",
+    "mainClass": "Program1",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "Reads course records from a text file and prints each distinct course name in sorted order."
+  },
+  {
+    "id": "algorithms/regional-vote-tally",
+    "name": "Regional election tally exercise",
+    "path": "java/algorithms/regional-vote-tally",
+    "mainClass": "Program2",
+    "kind": "Java",
+    "category": "algorithms",
+    "description": "Counts candidate tokens for several regions and reports a winner only when a candidate has a strict majority."
+  },
+  {
+    "id": "foundations/greeting",
+    "name": "Greeting",
+    "path": "java/foundations/greeting",
+    "mainClass": "Greeting",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "A short console program that prints a greeting and a synthetic profile."
+  },
+  {
+    "id": "foundations/bmi",
+    "name": "BMI",
+    "path": "java/foundations/bmi",
+    "mainClass": "myPackage.BMI",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "Converts pounds and inches to a BMI value and displays the exercise’s conditional result message."
+  },
+  {
+    "id": "foundations/studentgrades",
+    "name": "StudentGrades",
+    "path": "java/foundations/studentgrades",
+    "mainClass": "myPackage.StudentGrades",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "Averages three scores and assigns a letter grade using fixed score thresholds."
+  },
+  {
+    "id": "foundations/discountcalculator",
+    "name": "DiscountCalculator",
+    "path": "java/foundations/discountcalculator",
+    "mainClass": "myPackage.DiscountCalculator",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "Calculates the discount and final price for packages priced at $99 each."
+  },
+  {
+    "id": "foundations/internetbills",
+    "name": "InternetBills",
+    "path": "java/foundations/internetbills",
+    "mainClass": "myPackage.InternetBills",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "Calculates a monthly bill for one of three fixed service plans."
+  },
+  {
+    "id": "foundations/mathtutoringgame",
+    "name": "MathTutoringGame",
+    "path": "java/foundations/mathtutoringgame",
+    "mainClass": "myPackage.MathTutoringProject",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "An interactive arithmetic exercise with random addition, subtraction, and multiplication questions."
+  },
+  {
+    "id": "foundations/arraysandwordfrequency",
+    "name": "ArraysAndWordFrequency",
+    "path": "java/foundations/arraysandwordfrequency",
+    "mainClass": "myPackage.Assignment",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "Finds distinct integers in first-seen order and counts case-insensitive words in a paragraph."
+  },
+  {
+    "id": "foundations/account",
+    "name": "Account model and demonstration",
+    "path": "java/foundations/account",
+    "mainClass": "TestAccount",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "A small account class with balance operations, interest calculations, and a console demonstration."
+  },
+  {
+    "id": "foundations/marathon",
+    "name": "Marathon rankings",
+    "path": "java/foundations/marathon",
+    "mainClass": "Marathon",
+    "kind": "Java",
+    "category": "foundations",
+    "description": "Finds the fastest and second-fastest entries in a list of running times."
+  },
+  {
+    "id": "practice/file-backed-task-list",
+    "name": "File-backed Task List",
+    "path": "practice/file-backed-task-list",
+    "mainClass": "TaskList",
+    "kind": "Java",
+    "category": "practice",
+    "description": "A console reference exercise for managing tasks stored in a UTF-8 text file."
+  },
+  {
+    "id": "practice/search-and-sort",
+    "name": "Search and Sort Practice",
+    "path": "practice/search-and-sort",
+    "mainClass": "SearchSortPractice",
+    "kind": "Java",
+    "category": "practice",
+    "description": "A reference exercise implementing insertion sort, merge sort, and first-match binary search."
+  }
+]

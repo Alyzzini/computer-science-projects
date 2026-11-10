@@ -1,0 +1,8 @@
+(a+[b*{c}])
+<tag>{[()]}</tag>
+([)]
+)abc(
+no delimiters
+<[{}]>
+(unclosed
+[x] ==> previous annotation

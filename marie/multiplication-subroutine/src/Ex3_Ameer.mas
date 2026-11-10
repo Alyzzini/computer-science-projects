@@ -1,0 +1,65 @@
+/ Mul accepts N,M in decimal 0..32767.
+/ Mul writes Product, returning -1 there on invalid input/overflow.
+ORG 100
+Input
+Store N
+Input
+Store M
+JnS Mul
+Load Product
+Output
+Halt
+Mul, HEX 0
+Load N
+Skipcond 000
+Jump CheckM
+Jump Failure
+CheckM, Load M
+Skipcond 000
+Jump Choose
+Jump Failure
+Choose, Load N
+Subt M
+Skipcond 000
+Jump NAtLeastM
+Jump NLessM
+NAtLeastM, Load N
+Store Big
+Load M
+Store Count
+Jump Init
+NLessM, Load M
+Store Big
+Load N
+Store Count
+Init, Clear
+Store Product
+LoopCheck, Load Count
+Skipcond 400
+Jump CheckAdd
+Jump Return
+CheckAdd, Load MaxValue
+Subt Product
+Subt Big
+Skipcond 000
+Jump AddSafe
+Jump Failure
+AddSafe, Load Product
+Add Big
+Store Product
+Load Count
+Subt One
+Store Count
+Jump LoopCheck
+Failure, Load NegOne
+Store Product
+Return, JumpI Mul
+N, DEC 0
+M, DEC 0
+Big, DEC 0
+Count, DEC 0
+Product, DEC 0
+One, DEC 1
+MaxValue, DEC 32767
+NegOne, DEC -1
+END

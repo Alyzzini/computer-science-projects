@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img">
+<title>Fish sandwich</title><desc>A simple geometric fish sandwich, supplied as a generic menu illustration.</desc>
+<rect width="480" height="260" rx="16" fill="#f5f8fc"/>
+<rect x="9" y="9" width="462" height="242" rx="12" fill="none" stroke="#dce5ee"/>
+<text x="240" y="35" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#24364b">Fish sandwich</text>
+<ellipse cx="240" cy="199" rx="150" ry="12" fill="#dce6ef"/><path d="M116 120 Q125 64 230 61 Q340 62 364 120 Z" fill="#e8bc75" stroke="#ad743c" stroke-width="3"/><ellipse cx="179" cy="94" rx="5" ry="2.5" fill="#fff3ce" transform="rotate(-18 179 94)"/><ellipse cx="211" cy="81" rx="5" ry="2.5" fill="#fff3ce" transform="rotate(10 211 81)"/><ellipse cx="247" cy="94" rx="5" ry="2.5" fill="#fff3ce" transform="rotate(-7 247 94)"/><ellipse cx="281" cy="82" rx="5" ry="2.5" fill="#fff3ce" transform="rotate(20 281 82)"/><ellipse cx="308" cy="100" rx="5" ry="2.5" fill="#fff3ce" transform="rotate(-15 308 100)"/><rect x="110" y="125" width="260" height="19" rx="9" fill="#77a650"/><path d="M118 135 L145 146 L173 133 L203 147 L233 134 L265 146 L293 132 L325 146 L362 134" fill="none" stroke="#558439" stroke-width="5" stroke-linejoin="round"/><rect x="118" y="143" width="245" height="27" rx="11" fill="#f0c34e" stroke="#92693f" stroke-width="2"/><path d="M136 157 L344 157" stroke="#fff0cb" stroke-width="5" stroke-linecap="round"/><rect x="125" y="169" width="230" height="9" rx="4" fill="#d85a4b"/><path d="M117 178 H364 Q357 199 330 201 H149 Q123 199 117 178Z" fill="#e8bc75" stroke="#ad743c" stroke-width="3"/>
+<text x="240" y="241" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#42576d">Sample illustration</text>
+</svg>

@@ -1,0 +1,48 @@
+/ Nonnegative signed-16-bit inputs only.
+/ Result is Z + max(X,Y), or -1 on a negative input or overflow.
+ORG 100
+Input
+Store X
+Skipcond 000
+Jump ReadY
+Jump Error
+ReadY, Input
+Store Y
+Skipcond 000
+Jump ReadZ
+Jump Error
+ReadZ, Input
+Store Z
+Skipcond 000
+Jump Choose
+Jump Error
+Choose, Load X
+Subt Y
+Skipcond 000
+Jump UseX
+Jump UseY
+UseX, Load X
+Store Addend
+Jump CheckSum
+UseY, Load Y
+Store Addend
+CheckSum, Load MaxValue
+Subt Addend
+Subt Z
+Skipcond 000
+Jump AddSafe
+Jump Error
+AddSafe, Load Z
+Add Addend
+Output
+Halt
+Error, Load NegOne
+Output
+Halt
+X, DEC 0
+Y, DEC 0
+Z, DEC 0
+Addend, DEC 0
+MaxValue, DEC 32767
+NegOne, DEC -1
+END

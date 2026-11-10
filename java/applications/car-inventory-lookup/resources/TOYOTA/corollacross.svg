@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img">
+<title>Car illustration</title><desc>Generic geometric car illustration for the Corolla Cross sample record. It does not depict the actual vehicle model.</desc>
+<rect width="480" height="260" rx="16" fill="#f5f8fc"/>
+<rect x="9" y="9" width="462" height="242" rx="12" fill="none" stroke="#dce5ee"/>
+<text x="240" y="30" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#24364b">Car illustration</text>
+<text x="240" y="52" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#52687d">Corolla Cross - sample record</text><ellipse cx="241" cy="194" rx="168" ry="10" fill="#dce6ef"/><path d="M90 143 Q93 126 122 124 L170 89 H279 L326 124 H354 Q385 127 390 149 V170 Q385 180 368 181 H108 Q85 178 85 165Z" fill="#a65a69" stroke="#344960" stroke-width="3"/><path d="M180 98 H225 V122 H144Z" fill="#c4e3f0"/><path d="M235 98 H273 L311 122 H235Z" fill="#b0d5e6"/><path d="M233 131 V173" stroke="#344960" stroke-width="2" opacity="0.65"/><path d="M263 135 H279" stroke="#d8e7ee" stroke-width="4" stroke-linecap="round"/><path d="M174 135 H190" stroke="#d8e7ee" stroke-width="4" stroke-linecap="round"/><rect x="365" y="137" width="20" height="10" rx="3" fill="#ffe6a0"/><rect x="91" y="140" width="12" height="11" rx="2" fill="#e87869"/><circle cx="149" cy="175" r="24" fill="#273646"/><circle cx="149" cy="175" r="12" fill="#c5d2dc"/><circle cx="328" cy="175" r="24" fill="#273646"/><circle cx="328" cy="175" r="12" fill="#c5d2dc"/>
+<text x="240" y="225" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#42576d">Sample illustration</text><text x="240" y="245" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#5c6b7b">Generic shape; not the named model</text>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img">
+<title>Sandals</title><desc>A pair of generic geometric sandals with coral straps, without brand markings.</desc>
+<rect width="480" height="260" rx="16" fill="#f5f8fc"/>
+<rect x="9" y="9" width="462" height="242" rx="12" fill="none" stroke="#dce5ee"/>
+<text x="240" y="35" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#24364b">Sandals</text>
+<ellipse cx="240" cy="202" rx="136" ry="10" fill="#dce6ef"/><g transform="rotate(-13 185 139)"><rect x="136" y="65" width="83" height="139" rx="35" fill="#cb9561" stroke="#8e5c35" stroke-width="3"/><path d="M145 104 Q177 85 210 103 L212 132 Q179 114 143 133Z" fill="#cd6260" stroke="#9b4346" stroke-width="3"/><path d="M144 158 Q177 139 210 157 L209 176 Q175 159 145 178Z" fill="#cd6260" stroke="#9b4346" stroke-width="3"/></g><g transform="rotate(13 292 139)"><rect x="252" y="65" width="83" height="139" rx="35" fill="#cb9561" stroke="#8e5c35" stroke-width="3"/><path d="M261 104 Q293 85 326 103 L328 132 Q295 114 259 133Z" fill="#d97870" stroke="#9b4346" stroke-width="3"/><path d="M260 158 Q293 139 326 157 L325 176 Q291 159 261 178Z" fill="#d97870" stroke="#9b4346" stroke-width="3"/></g>
+<text x="240" y="241" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#42576d">Sample illustration</text>
+</svg>

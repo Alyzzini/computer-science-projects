@@ -1,0 +1,11 @@
+# Local build output
+.build/
+**/build/
+*.class
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

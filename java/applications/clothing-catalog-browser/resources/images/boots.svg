@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img">
+<title>Boots</title><desc>A pair of generic geometric purple boots without brand markings.</desc>
+<rect width="480" height="260" rx="16" fill="#f5f8fc"/>
+<rect x="9" y="9" width="462" height="242" rx="12" fill="none" stroke="#dce5ee"/>
+<text x="240" y="35" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#24364b">Boots</text>
+<ellipse cx="240" cy="202" rx="136" ry="10" fill="#dce6ef"/><path d="M144 64 H216 L213 145 L239 160 Q257 171 253 190 H124 V176 L143 145Z" fill="#665480" stroke="#3e354e" stroke-width="3"/><path d="M124 186 H255 V202 H124Z" fill="#343342"/><path d="M151 70 H210 V85 H151Z" fill="#89749f"/><path d="M238 73 H307 L305 150 L332 164 Q354 174 350 191 H223 V176 L238 149Z" fill="#80649a" stroke="#493859" stroke-width="3"/><path d="M222 188 H352 V202 H222Z" fill="#343342"/><path d="M245 79 H301 V93 H245Z" fill="#aa8fbe"/>
+<text x="240" y="241" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#42576d">Sample illustration</text>
+</svg>

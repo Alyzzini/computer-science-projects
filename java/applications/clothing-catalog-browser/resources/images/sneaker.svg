@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img">
+<title>Sneaker</title><desc>A generic geometric blue sneaker illustration without a brand logo.</desc>
+<rect width="480" height="260" rx="16" fill="#f5f8fc"/>
+<rect x="9" y="9" width="462" height="242" rx="12" fill="none" stroke="#dce5ee"/>
+<text x="240" y="35" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#24364b">Sneaker</text>
+<ellipse cx="240" cy="202" rx="136" ry="10" fill="#dce6ef"/><path d="M128 91 L184 83 L219 126 Q245 142 303 151 L354 162 Q371 167 370 188 H115 L107 167 L122 135Z" fill="#5795a9" stroke="#32556b" stroke-width="3"/><path d="M113 177 H370 V193 Q356 202 332 200 H127 Q110 197 113 177Z" fill="#fffdf5" stroke="#32556b" stroke-width="3"/><path d="M159 103 L197 115 M168 115 L207 127 M180 128 L220 139 M195 141 L235 151" stroke="#f7f5ec" stroke-width="7" stroke-linecap="round"/><path d="M132 101 L141 151" stroke="#38718b" stroke-width="7"/><path d="M291 151 Q279 163 283 176" fill="none" stroke="#32556b" stroke-width="3"/>
+<text x="240" y="241" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#42576d">Sample illustration</text>
+</svg>

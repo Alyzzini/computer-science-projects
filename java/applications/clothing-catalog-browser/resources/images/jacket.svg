@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="260" viewBox="0 0 480 260" role="img">
+<title>Jacket</title><desc>A generic geometric orange jacket illustration without a brand logo.</desc>
+<rect width="480" height="260" rx="16" fill="#f5f8fc"/>
+<rect x="9" y="9" width="462" height="242" rx="12" fill="none" stroke="#dce5ee"/>
+<text x="240" y="35" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#24364b">Jacket</text>
+<ellipse cx="240" cy="202" rx="136" ry="10" fill="#dce6ef"/><path d="M191 64 L215 55 H265 L288 64 L333 104 L307 137 L286 117 L290 202 H190 L194 117 L173 137 L147 104Z" fill="#d28a41" stroke="#805529" stroke-width="3"/><path d="M215 55 L240 78 L265 55 L262 88 H218Z" fill="#6b4e37"/><path d="M240 79 V199" stroke="#f4e2b8" stroke-width="5"/><path d="M201 148 H228 V176 H201Z M252 148 H279 V176 H252Z" fill="#b77433" stroke="#805529" stroke-width="2"/><path d="M190 195 H290 M153 111 L174 132 M306 132 L327 111" stroke="#a7642f" stroke-width="8"/>
+<text x="240" y="241" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#42576d">Sample illustration</text>
+</svg>
