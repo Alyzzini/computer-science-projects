@@ -2,7 +2,7 @@
 package myPackage;
 import java.util.NoSuchElementException;
 
-/** Original submission header names Ameer AZ and 3/31/2025; this is a later replacement repair. */
+/** Maintained replacement for the original arithmetic practice submission. */
 public class MathTutoringProject {
     public static void main(String[] args) {
         final int MIN = 10, MAX = 50;

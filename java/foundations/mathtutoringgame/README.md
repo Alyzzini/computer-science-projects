@@ -23,7 +23,7 @@ The repository launcher is another way to build and run the program. This versio
 
 ## Notes
 
-The original source identifies Ameer AZ and March 31, 2025.
+This maintained version replaces the original arithmetic practice submission.
 
 Input handling and numeric bounds were revised during portfolio preparation.
 
