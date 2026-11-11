@@ -1,5 +1,27 @@
 # Validation notes
 
+## Included example checks
+
+Run the five console examples from the repository root with Python 3.9+ and JDK 17+:
+
+```sh
+python tools/check_examples.py
+```
+
+Or select a JDK explicitly:
+
+```sh
+python tools/check_examples.py --java-home PATH_TO_JDK
+```
+
+The checker builds through the repository launcher, runs the actual programs, and compares their output with expected results. It covers stack partitioning, delimiter validation, unique course names, regional vote counting, and a synthetic phone-directory add/lookup/update/remove workflow. Sample files are read without modification. Each example has a 45-second limit, and a failed check makes the command return a nonzero exit status.
+
+All five examples passed on November 10, 2026. A deliberately changed course fixture in a temporary copy correctly failed the unique-courses check. These are small reproducible examples; the broader recorded checks below cover additional cases.
+
+The screenshots in `docs/screenshots/` are captures of real Swing components with synthetic input. The restaurant capture shows a $12.84 order, $20.00 payment, and $7.16 change; the student capture shows record 2 of 4. Their displayed states were checked before capture. The phone-directory transcript is actual process output.
+
+## Broader recorded checks
+
 The prepared source package was checked on November 10, 2026 using Temurin JDK 21 on Windows. Java compilation targets Java 8 language and API compatibility; Java 8 itself was not used for execution.
 
 | Group | Programs | Passed runtime scenarios |
@@ -22,7 +44,7 @@ The repository's build/run launcher passed 37 integration checks, including argu
 python tools/projects.py build all
 ```
 
-Use `python tools/projects.py list` to see program IDs, then run a selected project with `python tools/projects.py run ID`. The local regression harnesses and raw audit logs are not bundled in this repository. Compilation alone does not repeat the runtime checks above.
+Use `python tools/projects.py list` to see program IDs, then run a selected project with `python tools/projects.py run ID`. The broader local regression harnesses and raw audit logs are not bundled in this repository. The five included console checks are available in `tools/check_examples.py`; compilation alone does not repeat those checks or the broader runtime scenarios.
 
 ## Limits
 

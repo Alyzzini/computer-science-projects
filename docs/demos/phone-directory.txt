@@ -1,0 +1,77 @@
+Phone Directory Project
+1. Look up a phone number
+2. Add a member along with a phone number
+3. Change a phone number of an existing member
+4. Display all the members and their phone numbers
+5. Display the members from a certain area code and their phone numbers
+6. Remove a member from the phone directory
+7. Sort by last name
+8. Exit the program
+Enter your choice: Enter member name: Enter phone number: Member successfully added
+
+Phone Directory Project
+1. Look up a phone number
+2. Add a member along with a phone number
+3. Change a phone number of an existing member
+4. Display all the members and their phone numbers
+5. Display the members from a certain area code and their phone numbers
+6. Remove a member from the phone directory
+7. Sort by last name
+8. Exit the program
+Enter your choice: Enter member name: Demo Rowan  202-555-0199
+
+Phone Directory Project
+1. Look up a phone number
+2. Add a member along with a phone number
+3. Change a phone number of an existing member
+4. Display all the members and their phone numbers
+5. Display the members from a certain area code and their phone numbers
+6. Remove a member from the phone directory
+7. Sort by last name
+8. Exit the program
+Enter your choice: Enter member name: Enter new phone number: Phone number updated successfully.
+
+Phone Directory Project
+1. Look up a phone number
+2. Add a member along with a phone number
+3. Change a phone number of an existing member
+4. Display all the members and their phone numbers
+5. Display the members from a certain area code and their phone numbers
+6. Remove a member from the phone directory
+7. Sort by last name
+8. Exit the program
+Enter your choice: Enter member name: Demo Rowan  303-555-0198
+
+Phone Directory Project
+1. Look up a phone number
+2. Add a member along with a phone number
+3. Change a phone number of an existing member
+4. Display all the members and their phone numbers
+5. Display the members from a certain area code and their phone numbers
+6. Remove a member from the phone directory
+7. Sort by last name
+8. Exit the program
+Enter your choice: Enter member name to remove: Member removed from the phone directory.
+
+Phone Directory Project
+1. Look up a phone number
+2. Add a member along with a phone number
+3. Change a phone number of an existing member
+4. Display all the members and their phone numbers
+5. Display the members from a certain area code and their phone numbers
+6. Remove a member from the phone directory
+7. Sort by last name
+8. Exit the program
+Enter your choice: Enter member name: Member not found in the phone directory.
+
+Phone Directory Project
+1. Look up a phone number
+2. Add a member along with a phone number
+3. Change a phone number of an existing member
+4. Display all the members and their phone numbers
+5. Display the members from a certain area code and their phone numbers
+6. Remove a member from the phone directory
+7. Sort by last name
+8. Exit the program
+Enter your choice: Exiting the program...
+

@@ -1,47 +1,69 @@
 # Regional Vote Tally
 
-Counts candidate tokens for several regions and reports a winner only when a candidate has a strict majority.
+Count candidate-name tokens for each region and report a winner only when one candidate has more than half the votes. This revised coursework exercise uses a `HashMap` and fictional sample ballots.
 
-A revised version of a Java coursework exercise. The included candidate names and ballots are fictional sample data.
+## Example
 
-## What it does
-
-- Uses a HashMap to count votes for each candidate.
-- Distinguishes a strict majority from a tie or a plurality without a majority.
-- Handles zero-vote regions and checks declared counts.
-- Reports malformed, missing, extra, or unreadable input.
-
-## Run
-
-Use a JDK with `javac` and `java` on your command path. These commands are run from the project folder; create `build` only if it does not already exist.
+The complete [sample file](election.txt) is:
 
 ```text
-mkdir build
-javac -proc:none -encoding UTF-8 -d build src/Program2.java
-java -cp build Program2
+4
+5
+CandidateA CandidateB CandidateA CandidateA CandidateC
+4
+CandidateA CandidateB CandidateA CandidateB
+0
+5
+CandidateA CandidateA CandidateB CandidateB CandidateC
 ```
 
-In the included four-region file, CandidateA wins the first region. The tie, zero-vote, and plurality-only regions each produce a runoff message.
-
-## Input file
-
-`election.txt` is included as sample data. Whitespace-separated UTF-8 tokens: a nonnegative region count, then for each region a nonnegative vote count followed by exactly that many single-token candidate names. No extra tokens follow the declared regions.
-
-The default file is read from the working directory. To use another file, pass its path after the class name:
+The program prints:
 
 ```text
-java -cp build Program2 path/to/input.txt
+CandidateA won the election.
+
+Nobody won! A special runoff election will be held.
+
+Nobody won! A special runoff election will be held.
+
+Nobody won! A special runoff election will be held.
 ```
 
-## Notes
+The first region gives CandidateA 3 of 5 votes. The remaining regions demonstrate a 2-2 tie, zero votes, and a 2-2-1 split. A largest count alone is insufficient: a winner must have a strict majority.
+
+## Implementation
+
+[`Program2.java`](src/Program2.java) creates a new `HashMap<String, Integer>` for each region. Every ballot increments its candidate's count with `getOrDefault`. A second pass through the map finds the largest count, and `maxVotes > votes / 2` applies the majority rule.
+
+The map stores counts rather than a list of every ballot. Its iteration order does not determine the outcome: a strict majority can belong to at most one candidate, and tied largest counts produce the runoff message.
+
+## Time and memory
+
+For one region, let **v** be its vote count and **c** its number of distinct candidate names. Counting is **expected O(v)** under the usual constant-time hash-table assumption. Scanning the counts adds **O(c)**, giving **expected O(v + c)** map work per region. This is not an unconditional worst-case linear guarantee: string hashing/equality adds work for name characters, and collisions can increase lookup cost.
+
+The map uses **O(c) entries plus the characters in the c stored names**. `Scanner` and the current token add input-buffer memory. Votes are processed as tokens rather than retained in a ballot array. The live count data is for the current region; maps are not accumulated across regions. The time across a file is the sum of its per-region work plus reading its input characters.
+
+## Run and input format
+
+From the repository root with Python 3.9+ and JDK 17+:
+
+```text
+python tools/projects.py run algorithms/regional-vote-tally
+```
+
+The default file is `election.txt`. Its whitespace-separated UTF-8 tokens are a nonnegative region count, then for each region a nonnegative vote count followed by exactly that many candidate names. Extra tokens after the declared regions are rejected.
+
+To use `custom-input.txt` saved in this project folder:
+
+```text
+python tools/projects.py run algorithms/regional-vote-tally -- custom-input.txt
+```
+
+## Limits
 
 - Candidate names are single case-sensitive tokens.
-- A region needs more than half its votes for a winner; zero votes produce the runoff message.
-- A late file error may be reported after earlier region results have already printed.
-- This is a counting exercise with fictional ballots, not an election system.
+- Exactly half the votes is insufficient. A zero-vote region produces the runoff message.
+- Negative, malformed, missing, extra, or unreadable input is reported as an error. Earlier region results can already have printed before a late error.
+- This is a counting exercise, not an election system: it has no voter identity checks, duplicate-ballot detection, persistence, or election security features.
 
-## Checks
-
-The current version passed 26 recorded runtime scenarios on Temurin JDK 21 for Windows. The checks covered normal inputs and relevant error or boundary cases. This does not guarantee behavior for every input or platform.
-
-[Back to the project index](../../../README.md)
+[Algorithms overview](../README.md) · [All projects](../../../README.md)

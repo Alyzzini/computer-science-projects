@@ -1,46 +1,60 @@
 # Stack Partition by Sign
 
-Reads integer stacks from a text file and places negative integers below nonnegative integers using two queues.
+Partition a stack so its negative integers sit below its nonnegative integers. This is a revised coursework exercise using Java's `Stack`, `Queue`, and `LinkedList`; the included file is synthetic sample data.
 
-A revised version of a Java coursework exercise. The included text file is a new sample input.
+## Example
 
-## What it does
-
-- Uses Stack, Queue, and LinkedList from the Java standard library.
-- Processes multiple stack cases from a UTF-8 input file.
-- Checks case counts, malformed integers, missing or extra data, and file-read failures.
-
-## Run
-
-Use a JDK with `javac` and `java` on your command path. These commands are run from the project folder; create `build` only if it does not already exist.
+The complete [sample file](splitStack.txt) is:
 
 ```text
-mkdir build
-javac -proc:none -encoding UTF-8 -d build src/splitStackProgram/Main.java
-java -cp build splitStackProgram.Main
+3
+3 -2 0 5 -4
+1 2 3
+-1 -2 -3
 ```
 
-The sample stack 3 -2 0 5 -4 becomes [-4, -2, 5, 0, 3].
-
-## Input file
-
-`splitStack.txt` is included as sample data. The first nonblank line is a nonnegative case count. Each following nonblank line contains one or more signed 32-bit integers for one stack, listed bottom to top. No extra data follows the declared cases.
-
-The default file is read from the working directory. To use another file, pass its path after the class name:
+The first line declares three cases. Each following nonblank line is one stack, written from **bottom to top**. The program prints:
 
 ```text
-java -cp build splitStackProgram.Main path/to/input.txt
+[-4, -2, 5, 0, 3]
+[3, 2, 1]
+[-3, -2, -1]
 ```
 
-## Notes
+For the first case, popping visits `-4, 5, 0, -2, 3`. Those values enter one queue for negatives and another for nonnegatives. Pushing the negative queue back first puts it below the nonnegative group. This also explains why the original order within each sign group is reversed.
 
-- This partitions by sign rather than sorting by value.
-- The input lists each stack from bottom to top. Popping the original stack reverses order within each sign group.
-- Blank lines are ignored; each declared case needs at least one integer.
-- A late file error may be reported after earlier case results have already printed.
+## Implementation
 
-## Checks
+Read [`splitStack` in Main.java](src/splitStackProgram/Main.java). It empties the supplied stack into the two queues, then rebuilds the same stack. The queues preserve the order in which values were popped. This makes the grouping logic explicit, at the cost of storage proportional to the stack size.
 
-The current version passed 21 recorded runtime scenarios on Temurin JDK 21 for Windows. The checks covered normal inputs and relevant error or boundary cases. This does not guarantee behavior for every input or platform.
+`main` handles the text format separately: it reads the declared case count, parses each stack, rejects missing or extra cases, and reports file-read errors.
 
-[Back to the project index](../../../README.md)
+## Time and memory
+
+Let **n** be the number of integers in one stack. The partition method takes **O(n) time**: each value is popped, enqueued, dequeued, and pushed once. The linked queues perform these operations in constant time, and the emptied stack already has capacity for the n values being put back.
+
+The two queues hold **O(n) additional entries** in total. This excludes the caller's existing stack, which also occupies O(n) space. The file wrapper additionally holds the current input line; if that line has **L characters**, its line/parsing storage is O(L). Cases are processed one at a time, rather than retaining every case.
+
+## Run and input format
+
+From the repository root with Python 3.9+ and JDK 17+:
+
+```text
+python tools/projects.py run algorithms/stack-partition
+```
+
+The default file is `splitStack.txt`. Its first nonblank line is a nonnegative case count. Each declared case needs a nonblank line containing one or more signed 32-bit integers. Blank lines are ignored, and extra data after the declared cases is rejected.
+
+To use `custom-input.txt` saved in this project folder:
+
+```text
+python tools/projects.py run algorithms/stack-partition -- custom-input.txt
+```
+
+## Limits
+
+- Values are grouped by sign, not sorted numerically. Zero belongs to the nonnegative group.
+- The file format cannot represent an empty stack case because blank lines are skipped. A zero case count is allowed.
+- A late file error can be reported after earlier results have printed; output is not rolled back.
+
+[Algorithms overview](../README.md) · [All projects](../../../README.md)

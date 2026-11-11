@@ -1,46 +1,60 @@
 # Sorted Unique Courses
 
-Reads course records from a text file and prints each distinct course name in sorted order.
+Read course records and print each distinct course name in sorted order. A `TreeSet` handles both duplicate removal and ordering. This is a revised coursework exercise; the sample student identifiers are fictional.
 
-A revised version of a Java coursework exercise. The sample file uses fictional DEMO identifiers.
+## Example
 
-## What it does
-
-- Uses a TreeSet for deduplication and ordering.
-- Accepts whitespace-separated identifiers and course names.
-- Handles blank lines and reports rows missing a course token.
-- Reads UTF-8 input and reports file errors.
-
-## Run
-
-Use a JDK with `javac` and `java` on your command path. These commands are run from the project folder; create `build` only if it does not already exist.
+The complete [sample file](classes.txt) is:
 
 ```text
-mkdir build
-javac -proc:none -encoding UTF-8 -d build src/Program1.java
-java -cp build Program1
+DEMO001 Math
+DEMO002 Science
+DEMO003 History
+DEMO004 Math
+DEMO005 Science
 ```
 
-The included file contains repeated Math and Science entries and prints [History, Math, Science].
-
-## Input file
-
-`classes.txt` is included as sample data. Each nonblank UTF-8 line contains an identifier followed by a single-token course name. Fields are separated by whitespace. Additional fields are ignored.
-
-The default file is read from the working directory. To use another file, pass its path after the class name:
+The program prints:
 
 ```text
-java -cp build Program1 path/to/input.txt
+[History, Math, Science]
 ```
 
-## Notes
+Repeated `Math` and `Science` records contribute only one entry each. The order comes from the set, not the order of the input records.
 
-- A course name is one case-sensitive token.
-- Only the second token on each line is collected; later fields are ignored.
-- This lists course names and does not manage enrollment.
+## Implementation
 
-## Checks
+[`Program1.java`](src/Program1.java) reads one line at a time with a UTF-8 `BufferedReader`. It skips blank lines, splits each remaining line on whitespace, and adds the second token to a `TreeSet<String>`. Rows without that token produce a line-numbered error.
 
-The current version passed 10 recorded runtime scenarios on Temurin JDK 21 for Windows. The checks covered normal inputs and relevant error or boundary cases. This does not guarantee behavior for every input or platform.
+Using an ordered set avoids collecting every record and sorting a separate result afterward. The tradeoff is comparison work on each insertion. Only distinct course names remain in the set; identifiers are not retained.
 
-[Back to the project index](../../../README.md)
+## Time and memory
+
+Let **n** be the number of nonblank records and **k** the number of distinct course names. Set insertion takes **O(n log(k + 1)) string comparisons** overall. This statement counts comparisons rather than treating arbitrarily long names as free.
+
+If **B** is the number of characters read and **L** the longest course name, a character-cost bound is **O(B + n L log(k + 1))**, including parsing. Printing the result also visits the stored name characters, which are already bounded by B.
+
+The set holds **O(k) entries plus the characters in the k distinct names**. The reader and split operation also need storage for the current line and its tokens: O(M), where **M** is the longest line length. Even ignored extra fields are temporarily parsed by `split`. The program does not keep all input records in memory.
+
+## Run and input format
+
+From the repository root with Python 3.9+ and JDK 17+:
+
+```text
+python tools/projects.py run algorithms/unique-courses
+```
+
+The default file is `classes.txt`. Each nonblank UTF-8 line needs an identifier and a single-token course name separated by whitespace. To use `custom-input.txt` saved in this project folder:
+
+```text
+python tools/projects.py run algorithms/unique-courses -- custom-input.txt
+```
+
+## Limits
+
+- Names are case-sensitive and use Java's natural string order. `Math` and `math` are distinct.
+- Only the second token is collected; later fields are ignored. A multiword course name is therefore not supported.
+- An empty file prints `[]`. Malformed rows or unreadable input produce an error rather than a course list.
+- This lists course names; it does not manage enrollment.
+
+[Algorithms overview](../README.md) · [All projects](../../../README.md)

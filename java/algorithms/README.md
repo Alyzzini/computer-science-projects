@@ -1,18 +1,34 @@
 # Java algorithms and data structures
 
-Each folder is an independent program.
+Four small programs show how stacks, queues, sets, and maps solve different problems. Each reads a text file and has a short input/output example in its README. They use Java's collection classes; the exercise code implements the processing logic around them.
 
-- [Gratuity calculator](gratuity/): A console calculator that takes a subtotal and tip percentage, then prints the gratuity and total.
-- [Income-band tax exercise](income-band-tax/): A Java console exercise that selects a rate from five income bands and rounds the resulting tax to the nearest dollar.
-- [Lottery digit matching](lottery/): A small console game that compares a two-digit guess with a random two-digit draw.
-- [Number guessing game](number-guessing/): A console guessing game with a random target from 0 through 100 and high-or-low hints.
-- [Coordinate geometry calculator](coordinate-geometry/): Calculates the slope and distance between two points with integer coordinates.
-- [Relative grade calculator](relative-grades/): Reads a group of scores and assigns letter grades relative to the highest score in the group.
-- [Bank account collection exercise](bank-account-tester/): Demonstrates object arrays, deposits and withdrawals, balance totals, filtering, and a name lookup using fictional bank accounts.
-- [Six recursive methods study wrapper](recursive-methods/): A console demonstration of recursive counting, summation, digit counting, and digit summation.
-- [Stack partition by sign](stack-partition/): Reads integer stacks from a text file and places negative integers below nonnegative integers using two queues.
-- [Balanced delimiter validator](delimiter-validation/): Checks whether parentheses, brackets, braces, and angle brackets are balanced and correctly nested.
-- [Sorted unique course listing](unique-courses/): Reads course records from a text file and prints each distinct course name in sorted order.
-- [Regional election tally exercise](regional-vote-tally/): Counts candidate tokens for several regions and reports a winner only when a candidate has a strict majority.
+| Exercise | Data structure | What to look for | Source |
+| --- | --- | --- | --- |
+| [Stack partition](stack-partition/) | Stack and two queues | Group values by sign while accounting for the order introduced by popping a stack | [Main.java](stack-partition/src/splitStackProgram/Main.java) |
+| [Delimiter validation](delimiter-validation/) | Stack | Match the most recent opening delimiter and reject incorrect nesting | [Main.java](delimiter-validation/src/Main.java) |
+| [Unique courses](unique-courses/) | TreeSet | Remove duplicates and maintain sorted order during insertion | [Program1.java](unique-courses/src/Program1.java) |
+| [Regional vote tally](regional-vote-tally/) | HashMap | Count frequencies, then distinguish a strict majority from a plurality | [Program2.java](regional-vote-tally/src/Program2.java) |
+
+From the repository root, run any example with Python 3.9+ and JDK 17+:
+
+```text
+python tools/projects.py run algorithms/stack-partition
+python tools/projects.py run algorithms/delimiter-validation
+python tools/projects.py run algorithms/unique-courses
+python tools/projects.py run algorithms/regional-vote-tally
+```
+
+The launcher builds each program and uses its project folder as the working directory, so the included sample file is found automatically. The four READMEs explain input formats, implementation choices, complexity assumptions, and limits. These are revised coursework exercises with synthetic sample files.
+
+## Other exercises
+
+- [Coordinate geometry](coordinate-geometry/) — slope and distance, including vertical lines and integer-coordinate limits.
+- [Relative grades](relative-grades/) — array input, a maximum search, and grade bands relative to the best score.
+- [Number guessing](number-guessing/) — a loop with high/low feedback and input validation.
+- [Lottery digit matching](lottery/) — digit extraction and conditional matching rules.
+- [Gratuity calculator](gratuity/) — percentage arithmetic and formatted output.
+- [Income-band tax](income-band-tax/) — conditional rate selection using a classroom formula, not current tax rules.
+- [Bank account collection](bank-account-tester/) — object arrays, totals, filtering, and lookup. The missing `BankAccount` dependency was reconstructed from the tester interface; the sample identities are fictional.
+- [Six recursive methods](recursive-methods/) — sequence and digit operations in a runnable wrapper reconstructed from written answers. The wrapper and input bounds were added for this version.
 
 [All projects](../../README.md)

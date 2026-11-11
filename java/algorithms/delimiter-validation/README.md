@@ -1,47 +1,67 @@
 # Balanced Delimiter Validator
 
-Checks whether parentheses, brackets, braces, and angle brackets are balanced and correctly nested.
+Check whether `()`, `[]`, `{}`, and `<>` are balanced and correctly nested. The key rule is that a closing delimiter must match the most recent opening delimiter. This is a revised coursework exercise with new sample expressions.
 
-A revised version of a Java coursework exercise. The included expressions are new sample data.
+## Example
 
-## What it does
-
-- Uses a stack to match opening and closing delimiters.
-- Checks one expression per nonblank UTF-8 line.
-- Ignores an existing annotation after the first ==> marker.
-- Reports file-open and file-read errors.
-
-## Run
-
-Use a JDK with `javac` and `java` on your command path. These commands are run from the project folder; create `build` only if it does not already exist.
+The complete [sample file](expressions.txt) is:
 
 ```text
-mkdir build
-javac -proc:none -encoding UTF-8 -d build src/Main.java
-java -cp build Main
+(a+[b*{c}])
+<tag>{[()]}</tag>
+([)]
+)abc(
+no delimiters
+<[{}]>
+(unclosed
+[x] ==> previous annotation
 ```
 
-(a+[b*{c}]) is valid, while ([)] is invalid because the nesting order does not match.
-
-## Input file
-
-`expressions.txt` is included as sample data. One expression per nonblank UTF-8 line. Text after the first ==> marker is treated as an annotation and ignored. Recognized pairs are (), [], {}, and <>.
-
-The default file is read from the working directory. To use another file, pass its path after the class name:
+The program prints:
 
 ```text
-java -cp build Main path/to/input.txt
+(a+[b*{c}]) ==> valid
+<tag>{[()]}</tag> ==> valid
+([)] ==> invalid
+)abc( ==> invalid
+no delimiters ==> valid
+<[{}]> ==> valid
+(unclosed ==> invalid
+[x] ==> valid
 ```
 
-## Notes
+`([)]` fails because `)` arrives while `[` is the most recent unmatched opener. Equal numbers of opening and closing symbols are not enough. The tag-like example is checked only for delimiter nesting; its text has no HTML meaning to this program.
 
-- Only delimiter balance is checked; quotes, comments, HTML semantics, and expression grammar are not parsed.
-- Characters other than the four delimiter pairs are ignored.
-- Empty strings are balanced at the method level; blank input lines are skipped.
-- A late file error may be reported after earlier expression results have already printed.
+## Implementation
 
-## Checks
+[`isValidExpression` in Main.java](src/Main.java) pushes opening delimiters onto a `Stack<Character>`. For each closer, it rejects an empty stack or a mismatched top element. After the scan, the stack must be empty. This handles nesting with one pass instead of separate counts for each delimiter type.
 
-The current version passed 11 recorded runtime scenarios on Temurin JDK 21 for Windows. The checks covered normal inputs and relevant error or boundary cases. This does not guarantee behavior for every input or platform.
+The file loop trims lines, skips blanks, and removes any old annotation after the first `==>` marker before calling the validator. It also reports file-open and file-read errors.
 
-[Back to the project index](../../../README.md)
+## Time and memory
+
+Let **n** be the expression's length in Java `char` units and **d** its maximum number of unmatched opening delimiters. A full validation takes **O(n) total time**, using amortized O(1) stack pushes; it may return sooner at the first mismatch. Each character is inspected once, and each stack entry is pushed and popped at most once.
+
+The method uses **O(d) auxiliary space**, up to O(n) for an expression made entirely of opening delimiters. This excludes the input string. The console wrapper also stores the current line/expression and constructs its printed result, adding O(n) string storage for that line. It does not retain a list of all expressions.
+
+## Run and input format
+
+From the repository root with Python 3.9+ and JDK 17+:
+
+```text
+python tools/projects.py run algorithms/delimiter-validation
+```
+
+The default file is `expressions.txt`: one expression per nonblank UTF-8 line. To check `custom-input.txt` saved in this project folder:
+
+```text
+python tools/projects.py run algorithms/delimiter-validation -- custom-input.txt
+```
+
+## Limits
+
+- Characters other than the four delimiter pairs are ignored. Quotes, comments, HTML, and expression grammar are not parsed.
+- An empty string is balanced at the method level; blank file lines and lines empty after annotation removal are skipped.
+- A late file error can be reported after earlier expression results have printed.
+
+[Algorithms overview](../README.md) · [All projects](../../../README.md)
